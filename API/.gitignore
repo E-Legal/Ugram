@@ -1,0 +1,11 @@
+node_modules/
+build/
+coverage/
+.vscode
+credentials.txt
+.env
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+tmp/

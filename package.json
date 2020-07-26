@@ -1,0 +1,20 @@
+{
+	"name": "ugram-h2020-team-14",
+	"version": "1.0.0",
+	"description": "Ugram Team 14",
+	"scripts": {
+		"start": "yarn run api && yarn run web",
+		"api": "sudo docker-compose -f ./API/docker-compose.yml up -d",
+		"web": "sudo docker-compose -f ./WEB/docker-compose.yml up -d"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GLO3112-classrooms/ugram-h2020-team-14.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/GLO3112-classrooms/ugram-h2020-team-14/issues"
+	},
+	"homepage": "https://github.com/GLO3112-classrooms/ugram-h2020-team-14#readme"
+}

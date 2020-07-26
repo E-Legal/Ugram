@@ -1,0 +1,80 @@
+{
+	"name": "ugram-api",
+	"version": "1.0.0",
+	"description": "Ugram API",
+	"main": "server.ts",
+	"directories": {
+		"doc": "doc"
+	},
+	"scripts": {
+		"dev": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts --ext ts --watch src",
+		"start": "yarn run postgres && ts-node -r tsconfig-paths/register src/server.ts",
+		"test": "yarn run postgres && NODE_ENV=test jest --detectOpenHandles --maxWorkers=10 --coverage",
+		"postgres": "sudo docker-compose up -d postgres",
+		"postgresWindows": "docker-compose up -d postgres",
+		"circleci": "NODE_ENV=test jest ./tests --detectOpenHandles --maxWorkers=10",
+		"testWindows": "yarn run postgresWindows && set NODE_ENV=test&& jest ./tests/users.test.ts --detectOpenHandles --maxWorkers=10 --coverage",
+		"production": "PORT=8081 ts-node -r tsconfig-paths/register src/server.ts",
+		"deploy": "eb deploy"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"verbose": true,
+		"preset": "ts-jest",
+		"moduleNameMapper": {
+			"@/(.*)": "<rootDir>/src/$1"
+		}
+	},
+	"env": {
+		"test": {
+			"plugins": [
+				"transform-es2015-modules-commonjs"
+			]
+		}
+	},
+	"keywords": [
+		"node",
+		"typescript",
+		"express"
+	],
+	"author": "Philippe De Sousa",
+	"license": "ISC",
+	"dependencies": {
+		"@sentry/node": "5.15.4",
+		"aws-sdk": "^2.639.0",
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"crypto": "^1.0.1",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"formidable": "^1.2.2",
+		"fs": "^0.0.1-security",
+		"jsonwebtoken": "^8.5.1",
+		"morgan": "^1.9.1",
+		"path": "^0.12.7",
+		"pg": "^7.17.1",
+		"pg-hstore": "^2.3.3",
+		"reflect-metadata": "^0.1.13",
+		"sequelize": "^5.21.3",
+		"sequelize-typescript": "^1.1.0",
+		"ts-node": "^8.6.2",
+		"tsconfig-paths": "^3.9.0",
+		"typescript": "^3.7.5",
+		"uuid": "^3.4.0",
+		"winston": "^3.2.1",
+		"winston-cloudwatch": "^2.3.0"
+	},
+	"devDependencies": {
+		"@types/bluebird": "^3.5.29",
+		"@types/express": "^4.17.2",
+		"@types/jest": "^24.9.0",
+		"@types/node": "^13.5.1",
+		"@types/validator": "^12.0.1",
+		"jest": "^24.9.0",
+		"nodemon": "^2.0.2",
+		"supertest": "^4.0.2",
+		"ts-jest": "^24.3.0",
+		"tslint": "^5.20.1"
+	}
+}

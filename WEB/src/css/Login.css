@@ -1,0 +1,19 @@
+.Register_text {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.Googlebtn {
+    margin-top: 10px;
+}
+
+@media all and (min-width: 480px) {
+    .Login {
+        padding: 60px 0;
+    }
+
+    .Login form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+}

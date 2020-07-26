@@ -1,0 +1,30 @@
+{
+    "first_name": "LOL FIRST",
+    "last_name": "LOL LAST",
+    "email": "LOL.LOL@gmail.com",
+    "phone": "27763763368",
+    "followers": 5678,
+    "nickname": "JJJ",
+    "imageSource": "none",
+    "date": {
+        "year": 1990,
+        "month": 3,
+        "day": 1
+    },
+    "images": [
+        {
+            "src": "./mountain.jpg",
+            "owner": "max",
+            "date": {
+                "year": 1990,
+                "month": 1,
+                "day": 1
+            },
+            "like": 1000,
+            "description": "LOL",
+            "id": "567"
+        }
+    ],
+    "id": "45678",
+    "key": "567"
+}
