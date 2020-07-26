@@ -7,11 +7,6 @@ http://ugram-api.eba-b322uwpn.us-west-2.elasticbeanstalk.com
 ## Website:
 http://ugram-team14-front.s3-website-us-west-2.amazonaws.com/
 
-## Concernant la feature de prise de photo avec notre Webcam
-
-Lors du développement de ce bonus nous n'avions pas pris en compte le fait que les navigateurs bloquent les accès aux périphériques internes à l'ordinateur lorsqu'il s'agit d'une url non sécurisée ce qui est le cas pour notre front c'est pourquoi si vous souhaitez voir notre bonus merci de suivre le tuto suivant https://medium.com/@Carmichaelize/enabling-the-microphone-camera-in-chrome-for-local-unsecure-origins-9c90c3149339
-qui permet de désactiver le blocage de la webcam ou si vous n'utilisez pas chrome merci de lancer le projet en local
-
 # Getting Started
 ## Starting the application:
 ```sh
