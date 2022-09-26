@@ -63,7 +63,7 @@
 		"typescript": "^3.7.5",
 		"uuid": "^3.4.0",
 		"winston": "^3.2.1",
-		"winston-cloudwatch": "^2.3.0"
+		"winston-cloudwatch": "^6.1.1"
 	},
 	"devDependencies": {
 		"@types/bluebird": "^3.5.29",
